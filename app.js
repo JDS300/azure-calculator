@@ -6,7 +6,7 @@ document.getElementById('azureForm').addEventListener('submit', function(event) 
     const numVolumes = document.getElementById('numVolumes').value;
     const volumeSizeGB = document.getElementById('volumeSizeGB').value;
 
-    const apiUrl = `https://prices.azure.com/api/retail/prices?cpu=${cpuCores}&ram=${ramGB}&volumes=${numVolumes}&size=${volumeSizeGB}`;
+    const apiUrl = `https://cors-anywhere.herokuapp.com/https://prices.azure.com/api/retail/prices?cpu=${cpuCores}&ram=${ramGB}&volumes=${numVolumes}&size=${volumeSizeGB}`;
 
     fetch(apiUrl)
         .then(response => response.json())
