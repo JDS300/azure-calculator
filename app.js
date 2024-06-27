@@ -1,12 +1,11 @@
 document.getElementById('azureForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
+    event.preventDefault(); // Prevent default form submission
+    
     const cpuCores = document.getElementById('cpuCores').value;
     const ramGB = document.getElementById('ramGB').value;
     const numVolumes = document.getElementById('numVolumes').value;
     const volumeSizeGB = document.getElementById('volumeSizeGB').value;
 
-    // Make API request to Azure Pricing API
     const apiUrl = `https://prices.azure.com/api/retail/prices?cpu=${cpuCores}&ram=${ramGB}&volumes=${numVolumes}&size=${volumeSizeGB}`;
 
     fetch(apiUrl)
@@ -23,7 +22,6 @@ function displayResults(data) {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = '';
 
-    // Display results in a formatted way
     const instanceName = data.instanceName;
     const instancePrice = data.instancePrice;
     const diskType = data.diskType;
