@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Instance Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Azure Instance Selector</h1>
+        <form id="azureForm">
+            <label for="cpuCores">Number of CPU Cores:</label>
+            <input type="number" id="cpuCores" name="cpuCores" required>
+            
+            <label for="ramGB">Amount of RAM (GB):</label>
+            <input type="number" id="ramGB" name="ramGB" required>
+            
+            <label for="numVolumes">Number of Data Volumes:</label>
+            <input type="number" id="numVolumes" name="numVolumes" required>
+            
+            <label for="volumeSizeGB">Size of Data Volumes (GB):</label>
+            <input type="number" id="volumeSizeGB" name="volumeSizeGB" required>
+            
+            <button type="submit">Find Azure Instance</button>
+        </form>
+        
+        <div id="results">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
